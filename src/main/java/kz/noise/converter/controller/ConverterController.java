@@ -23,7 +23,7 @@ public class ConverterController {
     }
 
     @PostMapping(value = "/convertDocxToPdf", consumes = MediaType.ALL_VALUE)
-    public byte[] convertDocxToPdf(@RequestBody MultipartFile file) throws IOException {
+    public byte[] convertDocxToPdf(@RequestBody MultipartFile file) {
         return converter.convertDocxToPdf(file);
     }
 
